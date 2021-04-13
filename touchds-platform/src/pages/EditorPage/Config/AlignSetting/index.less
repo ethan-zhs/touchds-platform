@@ -1,0 +1,92 @@
+@import '../../../../statics/style/theme.less';
+
+.config-manage {
+    transition: .25s ease-in-out;
+    height: 100%;
+    width: 332px;
+    background: #191c21;
+    display: flex;
+    flex-direction: column;
+
+    .config-manage-head {
+        height: 30px;
+        line-height: 30px;
+        background: #2e343c;
+        color: #bcc9d4;
+        text-align: center;        
+    }
+
+    .setting-panel-basic {
+        user-select: none;
+        width: 100%;
+        padding: 0 8px;
+        box-sizing: border-box;
+        flex-basis: 0%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            padding: 14px 0;
+            position: relative;
+
+            .form-item {
+                display: flex;
+                padding: 4px 0;
+
+                .form-label {
+                    box-sizing: border-box;
+                    width: 104px;
+                    line-height: 24px;
+                    padding-right: 5px;
+                    margin-left: 20px;
+                    color: #fff;
+                }
+
+                .form-field {
+                    width: 192px;
+                    display: flex;
+
+                    .align-box {
+                        i {
+                            .primary-button;
+                            display: inline;
+                            background: #303640;
+                            color: #bcc9d4;
+                            padding: 2px;
+                            margin-right: 0.5em;  
+                            border: 0;
+                            font-weight: normal;
+                            font-size: 16px;
+                            border-radius: 2px;                          
+                        }
+                    }
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100px;
+                background: #262c33;
+                width: 93%;
+                height: 1px;                
+                bottom: 1px;
+                left: 6%;
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}    

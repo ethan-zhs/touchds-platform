@@ -1,0 +1,88 @@
+@import '../../../statics/style/theme.less';
+
+.color-field {
+    height: 24px;
+    width: 100%;
+    background: #262c33;
+    border: 1px solid #0B0C0D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 24px;
+    font-size: 12px;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+    flex-direction: row;
+    position: relative;
+    .theme-box-hover;
+
+    &:hover {
+        background: #303640;
+    }
+
+    .color-fill {
+        cursor: pointer;
+        width: 22px;
+        height: 18px;
+        border-radius: 2px;
+        border: 1px solid #101011;
+        margin-left: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(data:image/png;base64,R0lGODdhCgAKAPAAAOXl5f///ywAAAAACgAKAEACEIQdqXt9GxyETrI279OIgwIAOw==);
+
+        > span {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .color-fill-input {
+        background: transparent;
+        padding-left: 5px;
+        border: none;
+        width: 0;
+        flex: 1;
+        font-size: 12px;
+        line-height: 24px;
+        color: #fff;
+    }
+
+    .color-picker-btn {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+    }
+
+    .sketch-picker-box {
+        position: absolute;
+        width: 100%;
+        top: 24px;
+    }
+}
+
+.color-picker-pop {
+    &:global.ant-popover-placement-bottomRight {
+        padding-top: 0;
+    }
+    
+    :global {      
+        .ant-popover-inner {
+            margin-right: -1px;
+            border-radius: 0px;
+            background: #262c33;
+            border: 1px solid #2483FF;
+
+            .ant-popover-inner-content {
+                padding: 0;
+            }
+        }
+
+        .ant-popover-content .ant-popover-arrow {
+            display: none;
+        }
+    }
+}

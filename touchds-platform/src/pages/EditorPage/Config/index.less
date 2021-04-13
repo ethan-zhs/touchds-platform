@@ -1,0 +1,30 @@
+.datat-editor-config {
+    width: 332px;
+    z-index: 90;
+    transition: width .25s ease-in-out;
+    overflow: hidden;
+    box-shadow: -1px 0 #000;
+    position: relative;
+    background: #1c1f25;
+    user-select: none;
+
+    &.__hide {
+        width: 0;
+        border: 0;
+    }
+
+    .config-manage {
+        transition: .25s ease-in-out;
+        height: 100%;
+        width: 332px;
+        background: #191c21;
+
+        .config-manage-head {
+            height: 30px;
+            line-height: 30px;
+            background: #2e343c;
+            color: #bcc9d4;
+            text-align: center;        
+        }
+    }    
+}

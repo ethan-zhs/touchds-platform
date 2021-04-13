@@ -1,0 +1,43 @@
+@import '../../../statics/style/theme.less';
+
+.tooltip-com {
+    pointer-events: none;
+    user-select: none;
+    :global {
+        .ant-tooltip-arrow {
+            border-color: @theme-color;
+            &::before {
+                background-color: @theme-color;
+            }
+        }
+        .ant-tooltip-inner {
+            border-radius: 1px;
+            background-color: @theme-color;
+            min-height: 25px;
+            padding: 0 8px;
+            line-height: 25px;
+            font-size: 12px;
+        }
+    }
+}
+
+.tooltip-com1 {
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+    padding-top: 15px;
+    :global {
+        .ant-tooltip-arrow {
+            display: none;
+        }
+        .ant-tooltip-inner {
+            border-radius: 1px;
+            background-color: #1b3964;
+            border: 1px solid @theme-color;
+            min-height: 25px;
+            padding: 0 8px;
+            line-height: 25px;
+            font-size: 12px;
+        }
+    }
+}

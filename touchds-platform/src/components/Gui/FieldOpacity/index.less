@@ -1,0 +1,25 @@
+.opacity-range {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+    
+    .input-range {
+        cursor: pointer;
+        height: 2px;
+        width: 92px;
+        -webkit-appearance: none;
+        box-sizing: border-box;
+        outline: 0;
+        display: inline-block;               
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            background: #00a0ff;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #fff;
+        }
+    }
+}

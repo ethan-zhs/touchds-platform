@@ -1,0 +1,45 @@
+@import '../../../statics/style/theme.less';
+
+.context-menu-wrap {
+    z-index: 9999;
+    background: #27343e;
+    color: #bcc9d4;
+    position: fixed;
+    user-select: none;
+    display: none;
+    transition: display 2s ease;
+
+    .context-menu-item {
+        padding: 0 6px;
+        line-height: 28px;
+        height: 28px;
+        border-left: 2px solid transparent;
+        cursor: pointer;
+        overflow: hidden;
+        padding-right: 3em;
+        display: flex;
+        align-items: center;
+
+        &.disable {
+            color: #576369;
+            pointer-events: none;
+            cursor: auto;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+
+        &:hover {
+            background: #222c32;
+            border-color: @theme-color;
+            color: @theme-color;
+        }
+    }
+
+    .context-menu-divider {
+        height: 1px;
+        width: 100%;
+        background-color: #3a4659;
+    }
+}

@@ -1,0 +1,118 @@
+.datat-editor-header {
+    height: 40px;
+    background: #1d1e1f;
+    position: relative;
+    border-bottom: 1px solid #000;
+    display: flex;    
+    align-items: center;
+    z-index: 100;
+    box-sizing: content-box;
+
+    .header-btn {
+        width: 40px;
+        height: 24px;
+        background: #303640;
+        box-shadow: inset 0 0 0 1px rgba(255,235,235,.1), 0 0 0 1px #181818;
+        transition: .2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #fff;
+        margin-right: 4px;
+        font-size: 14px;
+        
+        i {
+            height: 24px;     
+            display: flex;
+            align-items: center;
+            justify-content: center;      
+        }
+
+        &:hover {
+            background: #414750;
+        }
+
+        &.__selected {
+            background: #2483ff;
+        }
+
+        .__rotate {
+            animation: com-rotate 2s infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes com-rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+    
+    .back-btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #000;
+        font-size: 23px;
+        color: #2483ff; 
+        cursor: pointer;       
+    }
+
+    .editor-config {
+        display: flex;
+        width: 170px;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .drawer-actions {
+        display: flex;
+    }
+
+    .screen-info {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: #a1aeb3;
+        .screen-ico {
+            font-size: 16px;
+        }
+
+        span {
+            &::before {
+                content: '-';
+                margin: 0 10px;
+            }
+        }
+    }
+
+    .global-actions {
+        position: absolute;
+        top: 0;
+        right: 6px;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        font-size: 18px;
+        width: 300px;
+        justify-content: flex-end;
+
+        .header-btn {
+            font-size: 18px;
+            &:nth-child(3) {
+                font-size: 15px;
+            }
+        }
+    }
+}

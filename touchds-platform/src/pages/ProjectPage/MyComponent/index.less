@@ -1,0 +1,270 @@
+@import '../../../statics/style/theme.less';
+
+.my-coms {
+    position: relative;
+    user-select: none;
+    
+    .coms-main {
+        display: flex;
+        flex: 1;
+
+        .main-right-nav {
+            position: sticky;
+            min-width: 240px;
+            max-width: 240px;
+            top: 70px;
+            font-size: 14px;
+            height: 500px;
+            cursor: pointer;
+
+            .nav-title {
+                line-height: 36px;
+                margin: 7px 0 10px 0;
+                padding-left: 20px;
+
+                .link-title {
+                    transition: color .2s;
+                    color: #bcc9d4;
+
+                    :global(.icon-font) {
+                        padding: 0px 10px;
+                        font-size: 20px;
+                    }
+                }
+
+                &:hover .link-title {
+                    color: #2483ff;
+                }
+            }
+
+            .selected {
+                background-image: url(https://img.alicdn.com/tfs/TB1U8PivuSSBuNjy0FlXXbBpVXa-460-72.png);
+                background-repeat: round;
+
+                &:hover .link-title, .link-title{
+                    color: #fff !important;
+                }
+            }            
+        }
+
+        .favorite-com-list {
+            padding-left: 8px;
+            padding-right: 50px;
+            width: 100%;
+
+            .package-header {
+                position: sticky;
+                top: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid #434b55;
+                padding-bottom: 5px;
+                padding-top: 10px;
+                height: 56px;
+                background: #171b22;
+                z-index: 1;
+                min-width: 1024px;
+
+                .package-title {
+                    display: flex;
+                    align-items: center;
+                    padding: 5px 0;
+
+                    h2 {
+                        max-width: 200px;
+                        font-size: 14px;
+                        color: #2483ff;
+                        padding: 0 10px;
+                        border-left: 2px solid #2483ff;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+
+                    :global(.icon-font) {
+                        color: #2483ff;
+                        margin: 0 5px;
+                        cursor: pointer;
+                    }
+
+                    .color-bcc9d4 {
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        color: #bcc9d4;
+                    }
+
+                    .color-2483ff {
+                        padding: 0 2px;
+                        color: #2483ff;
+                    }
+
+                    .goto-workspace {
+                        color: #2483ff;
+                        font-size: 14px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            .list-main-package {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                padding-right: 20px;
+                padding: 16px 0 30px;
+
+                .favorite-empty {
+                    color: #fff;
+                    font-size: 12px;
+                    margin: 160px auto;
+                    text-align: center;
+
+                    .empty-img {
+                        width: 92px;
+                        height: 92px;
+                        margin-bottom: 20px;
+                    }
+
+                    .tip {
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .main-package {
+            width: 100%;
+
+            .com-package-list {
+                padding-left: 8px;
+                padding-right: 50px;
+                width: 100%;
+
+                .package-header {
+                    position: sticky;
+                    top: 70px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #434b55;
+                    padding-bottom: 5px;
+                    padding-top: 10px;
+                    height: 56px;
+                    background: #171b22;
+                    z-index: 1;
+                    min-width: 1024px;
+    
+                    .package-title {
+                        display: flex;
+                        align-items: center;
+                        padding: 5px 0;
+    
+                        h2 {
+                            max-width: 200px;
+                            font-size: 14px;
+                            color: #2483ff;
+                            padding: 0 10px;
+                            border-left: 2px solid #2483ff;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+    
+                        :global(.icon-font) {
+                            color: #2483ff;
+                            margin: 0 5px;
+                            cursor: pointer;
+                        }
+    
+                        .color-bcc9d4 {
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                            color: #bcc9d4;
+                        }
+    
+                        .color-2483ff {
+                            padding: 0 2px;
+                            color: #2483ff;
+                        }
+    
+                        .goto-workspace {
+                            color: #2483ff;
+                            font-size: 14px;
+                            margin-left: 10px;
+                        }
+                    }
+    
+                    .header-manager {
+                        display: flex;
+                        align-items: center;
+                        font-size: 14px;
+    
+                        .sort-type {
+                            display: inline-block;
+                            color: #bcc9d4;
+                            line-height: 30px;
+                            cursor: pointer;
+                            font-size: 14px;
+                            min-width: 100px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+    
+                            :global(.icon-font) {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+
+                .list-main-package {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: flex-start;
+                    padding-right: 20px;
+                    padding: 16px 0 30px;
+                
+                    .my-package {
+                        height: 194px;
+                        width: 266px;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .new-package {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100%;
+                            width: 100%;
+                            background-image: url(https://img.alicdn.com/tfs/TB11VLFvwmTBuNjy1XbXXaMrVXa-532-389.png);
+                            background-size: cover;
+                            font-size: 14px;
+                            color: #8eeeff;
+
+                            .add-new-package {
+                                cursor: pointer;
+
+                                :global(.icon-font) {
+                                    font-size: 19px;
+                                    display: block;
+                                    padding-bottom: 10px;
+                                    text-align: center;
+                                    cursor: pointer;
+                                    line-height: inherit;
+                                }
+
+                                .package-new {
+                                    letter-spacing: 2px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

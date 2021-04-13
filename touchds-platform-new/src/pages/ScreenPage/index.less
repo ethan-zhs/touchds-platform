@@ -1,0 +1,53 @@
+.screen-wrapper {
+    display: flex;
+    flex-direction: column;    
+    height: 100%;
+
+    .screen-header {
+        height: 40px;
+        border-bottom: 1px solid var(--gui-box-border-color);
+    }
+
+    .screen-container {
+        flex: 1;
+        display: flex;
+
+        .screen-layer {
+            width: 200px;
+            height: 100%;
+            border-right: 1px solid var(--gui-box-border-color);
+            flex-shrink: 0;
+            display: none;
+        }
+
+        .screen-canvas-panel {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            background: #ddd;
+
+            .runtime-iframe-wrapper {
+                position: absolute;
+                left: 60px;
+                top: 60px;
+                border: 1px solid #000;
+            }
+
+            .canvas-panel {
+                position: absolute;
+                left: 60px;
+                top: 60px;
+                border: 1px solid #000;
+            }
+        }
+
+        .screen-config {
+            width: 332px;
+            border-left: 1px solid var(--gui-box-border-color);
+            flex-shrink: 0;
+            background: var(--gui-primary-background);
+            z-index: 90;
+            display: none;
+        }
+    }
+}

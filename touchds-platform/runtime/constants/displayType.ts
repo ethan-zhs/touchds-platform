@@ -1,0 +1,13 @@
+/**
+ * Created by tommyZZM.OSX on 2020/1/10.
+ */
+
+enum DISPLAY_TYPE {
+    NIL,
+    FILL_SCREEN,
+    ASPECT_RATIO_FILL_WIDTH,
+    ASPECT_RATIO_FILL_HEIGHT,
+    ASPECT_RATIO_FILL_AUTO_SCROLL
+}
+
+export default DISPLAY_TYPE;

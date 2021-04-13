@@ -1,0 +1,190 @@
+.datat-slider {
+    height: 30px;
+    background: #222528;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid #000;
+    z-index: 99;
+
+    .keys-event {
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        padding-top: 2px;
+        cursor: pointer;
+    }
+
+    .percent-select {
+        width: 54px;
+        height: 20px;
+        margin-right: 15px;
+        background: #262c33;
+        border: 1px solid #0b0c0d;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .scale-input {
+            color: #bcc9d4;
+            background: 0 0;
+            width: 27px;
+            font-size: 10px;
+            padding-left: 5px;
+            caret-color: #bcc9d4;
+            text-align: right;
+            border: 0;
+            outline: 0;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none !important;
+	        margin: 0;
+        }
+
+        .percent-unit {
+            color: #bcc9d4;
+            margin-left: 1px;
+        }
+
+        :global {
+            .icon-bottom {
+                font-size: 12px;
+                transform: scale(0.7);
+            }
+        }
+    }
+
+    .slider-bar {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: #aaa;
+        font-size: 16px;
+        margin-right: 10px;
+
+        i {
+            font-size: 15px;
+            &:hover {
+                color: #fff;
+            }
+
+            &:global(.icon-zoom-out) {
+                cursor: zoom-out;
+            }
+
+            &:global(.icon-zoom-in) {
+                cursor: zoom-in;
+            }
+
+            &:global(.icon-viewport) {
+                margin-left: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .input-range {
+            cursor: pointer;
+            height: 2px;
+            width: 130px;
+            -webkit-appearance: none;
+            box-sizing: border-box;
+            outline: 0;
+            margin: 0 6px;
+            display: inline-block;               
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                background: #fff;
+                width: 6px;
+                height: 6px;
+            }
+        }
+    }
+}
+
+.keyboard-pop {
+    :global {
+        .ant-popover-inner {
+            user-select: none;
+            border-radius: 2px;
+            background: #303640;
+            box-shadow: 0 0 8px -4px #000;
+        }
+
+        .ant-popover-content .ant-popover-arrow {
+            border-right-color: #303640;
+            border-bottom-color: #303640;
+        }
+    }
+
+    .keyboard-panel {
+        color: #bcc9d4;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+
+        .keyboard-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 3px 0;
+
+            .key-use {
+                background: #262b33;
+                color: #08a1db;
+                padding: 1px 5px;
+                margin-left: 15px;
+
+                span:first-child {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.percent-pop {
+    :global {
+        .ant-popover-inner {
+            user-select: none;
+            border-radius: 0px;
+            background: #262c33;
+            border: 1px solid #000;
+
+            .ant-popover-inner-content {
+                padding: 0;
+            }
+        }
+
+        .ant-popover-content .ant-popover-arrow {
+            display: none;
+        }
+    }
+
+    .percent-panel {
+        color: #bcc9d4;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+
+        .percent-item {
+            width: 54px;
+            padding: 5px 0;
+            text-align: center;
+            cursor: pointer;
+            border-bottom: 1px solid #000;
+            &:last-child {
+                border: 0;
+            }
+
+            &:hover {
+                background: #0b0c0d;
+                color: #08a1db;
+                transition: background .4s;
+            }
+        }
+    }
+}

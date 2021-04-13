@@ -1,0 +1,38 @@
+.layer-manager-head {
+    height: 30px;
+    background: #2e343c;
+    color: #bcc9d4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 5px 0 10px;
+
+    .layer-head-btn {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        cursor: pointer;                
+
+        .selected {
+            color: #2483ff;
+            i:hover {
+                color: #2483ff;
+            }
+        }
+
+        .hide-layer {
+            font-size: 22px;
+            margin-left: 0px;
+        }
+
+        i {
+            margin-left: 4px;
+            transform: color .2s;
+            &:hover {
+                color: #fff;
+            }
+        }
+        
+    }
+}

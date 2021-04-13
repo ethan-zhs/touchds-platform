@@ -1,0 +1,124 @@
+.ruler {
+    width: 0;
+    height: 0;
+    z-index: 1;
+    position: fixed;
+
+    .ruler-wrapper {
+        position: absolute;
+        height: 20px;
+        background: var(--ruler-background);
+
+        .indicator {
+            border-left: 1px dashed rgba(0,173,255,.84);
+            position: absolute;
+            left: 0;
+
+            .indicator-tip {
+                position: absolute;
+                left: 10px;
+                color: #fff;
+                padding: 0 5px;
+                background: rgba(64,116,180,.7);
+            }
+        }
+
+        .lines-wrap {
+            position: absolute;
+            left: 0;
+
+            .ruler-line {
+                border-left: 1px solid rgba(0,173,255,.84);
+                position: absolute;                
+                left: 0;
+                padding-right: 5px;
+
+                span {
+                    position: absolute;
+                    left: 5px;
+                    color: #fff;
+                    padding: 0 5px;
+                    background: rgba(64,116,180,.7);
+                }
+            }
+        }
+
+        canvas {
+            height: 100%;
+        }
+
+        &.h-container {
+            left: 20px;
+            cursor: ew-resize;
+
+            .indicator {
+                top: 0;
+                height: 100vh;
+                .indicator-tip {
+                    top: 3px;
+                }
+            }
+
+            .lines-wrap {
+                top: 0;
+    
+                .ruler-line {
+                    top: 0;
+                    height: 100vh;
+                }
+            }
+        }
+
+        &.v-container {
+            transform: rotate(90deg);
+            transform-origin: 0 100% 0;
+            cursor: ns-resize;
+
+            .indicator {
+                bottom: 0;
+                height: 100vw;
+
+                .indicator-tip {
+                    bottom: 3px;
+                }
+            }
+
+            .lines-wrap {
+                bottom: 0;
+    
+                .ruler-line {
+                    bottom: 0;                    
+                    height: 100vw;
+
+                    span {
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .ruler-corner {
+        width: 20px;
+        height: 20px;
+        border-bottom: 1px solid #3a4659;
+        border-right: 1px solid #3a4659;
+        box-sizing: border-box;
+        position: absolute;
+        top:0;
+        left:0;
+        pointer-events: all;
+        background: var(--ruler-background);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            .ruler-corner-ico {
+                border-color: #fff;
+                color: #fff;
+            }
+        }
+    }
+}

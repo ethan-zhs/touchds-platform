@@ -1,0 +1,63 @@
+@import '../../../statics/style/theme.less';
+
+.layer-manager-toolbar {
+    height: 30px;
+    background: #222528;
+    color: #bcc9d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        font-size: 13px;            
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background .2s;
+
+        &:hover {
+            background: @theme-color;
+            color: #fff;
+        }
+
+        &.selected {
+            background: @theme-color;
+            color: #fff;
+        }
+    }
+}
+
+.layer-toolbar-bottom {
+    border-top: 1px solid #282f3a;
+
+    &.toolbar-disable {
+        span {
+            pointer-events: none;
+            color: #4e555c;
+
+            &:hover {
+                background: #2d353d;
+                color: #6e767f;
+            }
+        }
+    }
+
+    span {
+        &.disable {
+            color: #4e555c;
+            background: #22272f;
+            cursor: inherit;
+            pointer-events: none;
+        }
+
+        &.selected {
+            background: @theme-color;
+            color: #fff;
+        }
+    }
+}

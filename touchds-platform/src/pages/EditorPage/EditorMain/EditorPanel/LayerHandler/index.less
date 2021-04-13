@@ -1,0 +1,114 @@
+:global {    
+    .top-handler,
+    .right-handler,
+    .bottom-handler,
+    .left-handler {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    }
+    
+    .right-handler {
+        top: 0;
+        right: -5px;
+        width: 12px;
+        height: 100%;
+        &::after {
+            width: 1px;
+            height: 100%;
+        }
+    }
+    
+    .bottom-handler {
+        bottom: -5px;
+        width: 100%;
+        height: 11px;
+        &::after {
+            height: 1px;
+            width: 100%;
+        }
+    }
+    
+    .left-handler {
+        top: 0;
+        left: -5px;
+        width: 11px;
+        height: 100%;
+        &::after {
+            width: 1px;
+            height: 100%;
+        }
+    }
+    
+    .top-handler {
+        top: -5px;
+        width: 100%;
+        height: 11px;
+        &::after {
+            height: 1px;
+            width: 100%;
+        }
+    }
+    
+    .rotate-handler {
+        cursor: url(https://img.alicdn.com/tfs/TB1iPy.JFGWBuNjy0FbXXb4sXXa-24-24.png) 14 14, pointer;
+    }
+    
+    .control-point {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        width: 20px;
+        z-index: 2;                    
+    }
+    
+    .top-right-handler,
+    .bottom-right-handler,
+    .bottom-left-handler,
+    .top-left-handler {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 11px;
+        width: 11px;
+    }
+    
+    .top-right-handler {
+        right: -15px;
+        top: -15px;
+        .rotate-handler {
+            padding-top: 21px;
+            padding-right: 21px;
+        }
+    }
+    
+    .bottom-right-handler {
+        right: -15px;
+        bottom: -15px;
+        .rotate-handler {
+            padding-right: 21px;
+            padding-bottom: 21px;
+        }
+    }
+    
+    .bottom-left-handler {
+        left: -15px;
+        bottom: -15px;
+        .rotate-handler {
+            padding-left: 21px;
+            padding-bottom: 21px;
+        }
+    }
+    
+    .top-left-handler {
+        left: -15px;
+        top: -15px;
+        .rotate-handler {
+            padding-top: 21px;
+            padding-left: 21px;
+        }
+    }
+}

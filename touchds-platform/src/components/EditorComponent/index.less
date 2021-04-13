@@ -1,0 +1,158 @@
+.datat-editor-component {
+    flex: none;
+    width: 233px;
+    height: 100%;
+    z-index: 4;
+    overflow: hidden;
+    background: #1d2126;
+    border-right: 1px solid #000;
+    transition: width .3s ease;
+
+    &.__hide {
+        width: 0;
+        border: 0;
+    }
+
+    .component-panel {
+        width: 233px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: .3s ease;
+
+        .component-head {
+            height: 30px;
+            background: #2e343c;
+            color: #bcc9d4;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 0 5px 0 10px;
+    
+            :global(.icon-back) {
+                cursor: pointer;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        .component-wrap {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0%;
+            overflow: auto;
+            background: #1b1f25;
+
+            .component-choose-box {
+                display: flex;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;                
+                
+                .component-nav {
+                    display: flex;
+                    background: #191C21;
+                    height: 100%;
+                    width: 48px;
+                    line-height: unset;
+                    white-space: normal;
+
+                    .component-nav-wp {
+                        width: 100%;
+                        overflow-x: hidden;
+                        overflow-y: scroll;
+
+                        &::-webkit-scrollbar {
+                            height: 0;
+                            width: 0;
+                            background: transparent;
+                        }                    
+
+                        .component-tabs {
+                            width: 100%;
+                            height: 48px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            box-sizing: border-box;
+                            cursor: pointer;
+                            border-left: 2px solid transparent;
+                            
+                            :global(.icon-font) {
+                                font-size: 18px;
+                            }
+
+                            &.active {
+                                border-left: 2px solid #2483FF;
+                                background: #13161a;
+                                color: #2483FF;
+                            }
+                        }
+                    }
+                }
+
+                .component-list {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 0%;
+                    background: #13161a;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+
+                    .collapse-panel-header {
+                        border-bottom: 1px solid #2C2E33;
+                        height: 40px;
+                        font-size: 12px;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 6px;
+                        padding-right: 16px;
+                        cursor: pointer;
+                        color: #bcc9d4;
+
+                        .collapse-ico {
+                            margin: 0 5px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .search-box {
+            background: #191c21;
+            height: 30px;
+            box-sizing: border-box;
+
+            .search-input {
+                border: 0;
+                border-top: 1px solid #000;
+                width: 100%;
+                height: 30px;
+                background: #262C33;
+                box-sizing: border-box;
+                color: #A1AEB3;
+                padding: 0 7px;
+                transition: border .2s ease-in-out,box-shadow .2s ease-in-out;
+            }
+        }
+    }    
+}
+
+.ul-components {
+    .li-components {
+        padding: 15px 16px;
+        border-bottom: 1px solid #2C2E33;
+        cursor: pointer;
+
+        &:hover {
+           background-color: lighten(#13161a, 5%);
+        }
+    }
+}

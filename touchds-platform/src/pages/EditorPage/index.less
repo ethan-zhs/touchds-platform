@@ -1,0 +1,51 @@
+.datat-editor-wrapper {
+    width: 100%;
+    height: 100%;
+    background: #1b1f25;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    position: relative;
+    user-select: none;
+
+    .loading-indicator {
+        position: absolute;
+        background: -webkit-gradient(linear,80% 46%,10% 21%,from(#ff8754),to(#2483ff));
+        animation: ladingAnimation 1s infinite ease-out;
+        transition: height .5s;
+        width: 100%;
+        z-index: 101;
+        top: 40px;
+        left: 0;
+        height: 0px;
+
+        &.loading{
+            height: 1px;
+        }
+    }
+    
+    @keyframes ladingAnimation{
+        from {
+            left: -100%;
+        }
+        to{
+            left: 150%;
+        }
+    }
+
+    .datat-editor-main {
+        flex: 1;
+        z-index: 1;
+        display: flex;
+        background: #1b1f25;
+        position: relative;
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow: hidden;
+        background: url('../../statics/images/background/editor_back.png') repeat;
+    }
+
+    :global(.ant-spin-container) {
+        height: 100%;
+    }
+}
